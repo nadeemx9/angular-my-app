@@ -1,0 +1,28 @@
+<!-- <p>Hello {{name}}, Welcome to Angular Tutorial</p>
+<p>Role : {{role}}</p>  
+
+<button [disabled]="isButtionDisable">Click Here</button>
+
+<h1>Entered text = {{inputValue}}</h1>
+
+<input type="text" [value]="inputValue" (input) = "onInput($event)">
+<input type="text" [(ngModel)]="inputValue">
+<br><h1>USERS</h1>
+@for(user of users;track user.name){
+    @if(user.age > 18){
+        <h3>Name : {{user.name}}, Age : {{user.age}}, City : {{user.city}}</h3>
+    }
+}
+<br><h1>EMPLOYEES</h1>
+<div *ngFor="let emp of employees">
+    <h3 *ngIf="emp.exp>2 ; else elseBlock">Name : {{emp.name}}, Age : {{emp.role}}, City : {{emp.exp}}</h3>
+    <ng-template #elseBlock>
+        <h3>Name : {{emp.name}}, Age : False, City : Falses</h3>
+    </ng-template>
+</div>
+
+
+ -->
+
+
+ <h1>Hello - {{username}}</h1>
