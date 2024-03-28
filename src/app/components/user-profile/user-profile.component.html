@@ -25,4 +25,4 @@
  -->
 
 
- <h1>Hello - {{username}}</h1>
+ <h1>Hello - {{username | titlecase}}, Status : {{isSigle?"Single":"Married"}}, Age : {{age < 21 ? "Not Applicable":age}} Mobile : {{mobile | countrycode:"USA"}}</h1>

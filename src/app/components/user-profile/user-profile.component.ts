@@ -1,18 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, booleanAttribute, numberAttribute } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CountrycodePipe } from '../../pipes/countrycode.pipe';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, CountrycodePipe],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent {
 
   @Input() username=""
-
+  @Input({transform:booleanAttribute}) isSigle!: boolean;
+  @Input({transform:numberAttribute}) age!:number;
+  @Input() mobile=""
 
   name='Nadeem'
   role='Developer'
